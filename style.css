@@ -742,47 +742,33 @@ section h2::after {
         grid-template-columns: 1fr;
     }
 }
-/* --- NEW COMPACT MOBILE HEADER --- */
+/* --- SIMPLE MOBILE VERSION (No Top Bar) --- */
 @media screen and (max-width: 768px) {
-    .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 60px; /* This keeps it to ~10% of screen height */
-        background: white;
-        z-index: 1000;
-        transition: top 0.3s; /* This makes it slide smoothly */
-        display: flex;
-        align-items: center;
-        padding: 0 15px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    /* 1. Hide the entire header/nav bar on mobile */
+    header, .navbar, .nav-bar, nav {
+        display: none !important;
     }
 
-    /* Hide the long list of text links on mobile */
-    nav ul {
-        display: none;
-    }
-
-    /* Move the rest of the site down so it's not hidden under the bar */
+    /* 2. Reset the top spacing so there is no gap */
     body {
-        padding-top: 70px;
+        padding-top: 0 !important;
     }
 }
 
-/* --- Arrow Styling --- */
+/* --- The Arrow (Stay Always) --- */
 #backToTop {
-    display: none;
+    display: none; /* Only shows when scrolling */
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    background-color: #007bff;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    background-color: #007bff; /* Change to your favorite blue */
     color: white;
     border: none;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
