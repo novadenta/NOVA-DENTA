@@ -291,47 +291,15 @@
     <button onclick="scrollToTop()" id="backToTop" title="Go to top">↑</button>
 
 <script>
-    // Get the button
     let mybutton = document.getElementById("backToTop");
 
-    // When the user scrolls down 100px from the top, show the button
     window.onscroll = function() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        // Show arrow only after scrolling down 300px
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
             mybutton.style.display = "block";
         } else {
             mybutton.style.display = "none";
         }
-    };
-
-    // When the user clicks the button, scroll to the top
-    function scrollToTop() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    }
-</script>
-    <button onclick="scrollToTop()" id="backToTop">↑</button>
-
-<script>
-    let mybutton = document.getElementById("backToTop");
-    let lastScrollTop = 0;
-    let navbar = document.querySelector(".navbar");
-
-    window.onscroll = function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Show/Hide Arrow
-        if (scrollTop > 200) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
-
-        // Hide Navbar on Scroll Down, Show on Scroll Up
-        if (scrollTop > lastScrollTop && scrollTop > 60) {
-            navbar.style.top = "-70px"; // Slides it up out of view
-        } else {
-            navbar.style.top = "0"; // Slides it back down
-        }
-        lastScrollTop = scrollTop;
     };
 
     function scrollToTop() {
