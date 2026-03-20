@@ -742,3 +742,36 @@ section h2::after {
         grid-template-columns: 1fr;
     }
 }
+/* --- MOBILE VERSION STYLES --- */
+@media screen and (max-width: 768px) {
+    /* 1. Make the container fill the screen */
+    body {
+        padding: 10px;
+    }
+
+    /* 2. Stack elements vertically instead of side-by-side */
+    .container, .header, .services, .footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 3. Make images fit the phone width */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 4. Make text a bit smaller and easier to read on phones */
+    h1 {
+        font-size: 24px;
+    }
+
+    /* 5. Make buttons big enough for fingers to tap */
+    .button, button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+}
