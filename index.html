@@ -308,5 +308,35 @@
         window.scrollTo({top: 0, behavior: 'smooth'});
     }
 </script>
+    <button onclick="scrollToTop()" id="backToTop">↑</button>
+
+<script>
+    let mybutton = document.getElementById("backToTop");
+    let lastScrollTop = 0;
+    let navbar = document.querySelector(".navbar");
+
+    window.onscroll = function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Show/Hide Arrow
+        if (scrollTop > 200) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+
+        // Hide Navbar on Scroll Down, Show on Scroll Up
+        if (scrollTop > lastScrollTop && scrollTop > 60) {
+            navbar.style.top = "-70px"; // Slides it up out of view
+        } else {
+            navbar.style.top = "0"; // Slides it back down
+        }
+        lastScrollTop = scrollTop;
+    };
+
+    function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+</script>
 </body>
 </html>
