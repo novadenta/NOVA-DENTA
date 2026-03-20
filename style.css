@@ -742,33 +742,56 @@ section h2::after {
         grid-template-columns: 1fr;
     }
 }
-/* --- SIMPLE MOBILE VERSION (No Top Bar) --- */
+/* --- SIMPLE MOBILE VERSION --- */
 @media screen and (max-width: 768px) {
-    /* 1. Hide the entire header/nav bar on mobile */
-    header, .navbar, .nav-bar, nav {
+    /* 1. Make the bar very thin (about 8-10% of screen) */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px; /* Very slim */
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Centers the name */
+        z-index: 1000;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* 2. Hide all the menu links so they don't stretch the bar */
+    .navbar ul, .nav-links, nav ul {
         display: none !important;
     }
 
-    /* 2. Reset the top spacing so there is no gap */
+    /* 3. Style the Clinic Name to be clean and centered */
+    .logo, .navbar-brand {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #007bff; /* Or your clinic's theme color */
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    /* 4. Push content down just enough so it's not hidden */
     body {
-        padding-top: 0 !important;
+        padding-top: 55px !important;
     }
 }
 
-/* --- The Arrow (Stay Always) --- */
+/* Keep the Arrow Styling below this */
 #backToTop {
-    display: none; /* Only shows when scrolling */
+    display: none;
     position: fixed;
-    bottom: 25px;
-    right: 25px;
-    z-index: 1000;
-    background-color: #007bff; /* Change to your favorite blue */
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #007bff;
     color: white;
     border: none;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    cursor: pointer;
-    font-size: 24px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
