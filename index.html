@@ -14,7 +14,7 @@
                 <div class="logo">NOVA DENTA</div>
                 <ul class="nav-menu">
                     <li><a href="#home" class="nav-link">Bosh sahifa</a></li>
-                    <li><a href="#about" class="nav-link">Biz haqida</a></li>
+                    <li><a href="#about" class="nav-link">Biz haqimizda</a></li>
                     <li><a href="#services" class="nav-link">Xizmatlar</a></li>
                     <li><a href="#team" class="nav-link">Jamoa</a></li>
                     <li><a href="#testimonials" class="nav-link">Sharhlar</a></li>
@@ -150,12 +150,12 @@
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
                     <p class="testimonial-text">"Implantlarni o'rnatishdan qo'rqardim, ammo Dr. Jamoliddin bilan bu juda oson va muvaffaqiyatli chiqdi. Eng yaxshi qaror!"</p>
-                    <p class="testimonial-author">- Robert Thompson</p>
+                    <p class="testimonial-author">- Ravshan</p>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
                     <p class="testimonial-text">"NOVA DENTA-dagi "nol og'riq" yondashuvi va zamonaviy texnologiya, stomatologik tajriba muolajani og'riqsiz va yoqimliroq qildi."</p>
-                    <p class="testimonial-author">- Jennifer Lee</p>
+                    <p class="testimonial-author">- Shahlo</p>
                 </div>
             </div>
         </div>
@@ -184,10 +184,10 @@
                 <article class="blog-post">
                     <div class="blog-image">Blog Rasmi</div>
                     <div class="blog-content">
-                        <h3>Og'iz Sog'lig'ini Yaxshilashning 5 Ta'dbirlari</h3>
-                        <p class="blog-date">15-mart, 2026</p>
-                        <p>Sizning stomatologik sog'lig'ingizni keskin yaxshilashi mumkin bo'lgan sodda lekin samarali odatlarni kashf eting...</p>
-                        <a href="#" class="read-more">Batafsil o'qing →</a>
+                        <h3>Bolalar uchun ortopedik konstruksiya va to'g'ri koronka tanlash</h3>
+                        <p class="blog-date">14-fevral, 2026</p>
+                        <p>Ortopedik konstruksiya o'zi nima, nima uchun qo'yiladi va qanaqa yo'llarda amalga oshiriladi? shu kabi savollarga javob oling</p>
+                        <a href="blog1.html"="#" class="read-more">Batafsil o'qing →</a>
                     </div>
                 </article>
                 <article class="blog-post">
@@ -287,5 +287,38 @@
     </footer>
 
     <script src="script.js"></script>
+      <button onclick="scrollToTop()" id="backToTop" title="Go to top">↑</button>
+
+<script>
+    <button onclick="scrollToTop()" id="backToTop">↑</button>
+
+<script>
+    let mybutton = document.getElementById("backToTop");
+    let lastScrollTop = 0;
+    let navbar = document.querySelector(".navbar");
+
+    window.onscroll = function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Show/Hide Arrow
+        if (scrollTop > 200) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+
+        // Hide Navbar on Scroll Down, Show on Scroll Up
+        if (scrollTop > lastScrollTop && scrollTop > 60) {
+            navbar.style.top = "-70px"; // Slides it up out of view
+        } else {
+            navbar.style.top = "0"; // Slides it back down
+        }
+        lastScrollTop = scrollTop;
+    };
+
+    function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+</script>
 </body>
 </html>
