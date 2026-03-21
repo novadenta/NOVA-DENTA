@@ -237,30 +237,30 @@
                         <h3>🕒 Ish Vaqti</h3>
                         <p>Du-Sha: 24 soat xizmatdamiz <br>Yak: Dam olish kuni!</p>
                     </div>
-                </div>
-                <form action="https://formspree.io/f/mbdzeryp" method="POST" id="appointmentForm">
-    
-    <input type="text" name="Mijoz Ismi" placeholder="To'liq Ism Familiyangiz" required>
-    
-    <input type="tel" name="Telefon" placeholder="Telefon Raqamingiz" required>
-    
-    <select name="Xizmat turi" required>
-        <option value="">Xizmatni Tanlang</option>
-        <option value="Umumiy Stomatologiya">Umumiy Stomatologiya</option>
-        <option value="Kosmetik Stomatologiya">Kosmetik Stomatologiya</option>
-        <option value="Implantlar">Implantlar</option>
-        <option value="Ortopediya">Ortopediya</option>
-        <option value="Ildiz Kanal Terapiyasi">Ildiz Kanal Terapiyasi</option>
-        <option value="Bolalar Stomatologiyasi">Bolalar Stomatologiyasi</option>
-    </select>
-    
-    <input type="date" name="Sana" required>
-    
-    <textarea name="Izoh" placeholder="Qo'shimcha Izohlar" rows="4"></textarea>
-    
-    <button type="submit" class="btn btn-primary">Vaqt Belgilash</button>
-</form>
-            </div>
+               <div class="appointment-form-container">
+    <form action="https://formspree.io/f/mbdzeryp" method="POST" class="appointment-form" id="appointmentForm">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <input type="text" name="Mijoz Ismi" placeholder="To'liq Ism Familiyangiz" required>
+            <input type="tel" name="Telefon" placeholder="Telefon Raqamingiz" required>
+        </div>
+        
+        <select name="Xizmat turi" required>
+            <option value="">Xizmatni Tanlang...</option>
+            <option value="Umumiy Stomatologiya">Umumiy Stomatologiya</option>
+            <option value="Kosmetik Stomatologiya">Kosmetik Stomatologiya</option>
+            <option value="Implantlar">Implantlar</option>
+            <option value="Ortopediya">Ortopediya</option>
+            <option value="Ildiz Kanal Terapiyasi">Ildiz Kanal Terapiyasi</option>
+            <option value="Bolalar Stomatologiyasi">Bolalar Stomatologiyasi</option>
+        </select>
+        
+        <input type="date" name="Sana" required>
+        
+        <textarea name="Izoh" placeholder="Qo'shimcha savollaringiz yoki izohlaringiz bo'lsa yozing..." rows="4"></textarea>
+        
+        <button type="submit" class="btn btn-primary">Vaqtni Band Qilish</button>
+    </form>
+</div>
         </div>
     </section>
 
