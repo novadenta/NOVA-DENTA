@@ -845,3 +845,28 @@ section h2 {
         flex-direction: column; /* Stacks them on top of each other on phones */
     }
 }
+/* Instagram: Uses a linear gradient for that "pink/red" look */
+.icon-ig {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+}
+
+/* Telegram: Official Blue */
+.icon-tg {
+    background-color: #24A1DE;
+    color: white;
+}
+
+/* Threads: Sleek Black */
+.icon-th {
+    background-color: #000000;
+    color: white;
+}
+
+/* Ensuring the icons are centered and sized correctly */
+.blog-social-icon i {
+    font-size: 24px; /* Adjust based on your circle size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
