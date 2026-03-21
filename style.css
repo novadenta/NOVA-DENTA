@@ -802,3 +802,64 @@ section h2::after {
     font-size: 18px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
+/* --- MODERN APPOINTMENT FORM STYLING --- */
+.appointment-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.appointment-form input, 
+.appointment-form select, 
+.appointment-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Change border color when clicking into a field */
+.appointment-form input:focus, 
+.appointment-form select:focus, 
+.appointment-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Make the button look premium */
+.appointment-form .btn-primary {
+    width: 100%;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.appointment-form .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Layout fix for the info items */
+.contact-info .info-item {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.info-item i {
+    color: #007bff;
+    font-size: 20px;
+    margin-top: 5px;
+}
