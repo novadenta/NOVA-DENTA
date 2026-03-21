@@ -238,22 +238,28 @@
                         <p>Du-Sha: 24 soat xizmatdamiz <br>Yak: Dam olish kuni!</p>
                     </div>
                 </div>
-                <form class="appointment-form" id="appointmentForm">
-                    <input type="text" placeholder="To'liq Ism Familiyangiz" required>
-                    <input type="tel" placeholder="Telefon Raqamingiz" required>
-                    <select required>
-                        <option value="">Xizmatni Tanlang</option>
-                        <option value="general">Umumiy Stomatologiya</option>
-                        <option value="cosmetic">Kosmetik Stomatologiya</option>
-                        <option value="implants">Implantlar</option>
-                        <option value="orthodontics">Ortopediya</option>
-                        <option value="root-canal">Ildiz Kanal Terapi</option>
-                        <option value="pediatric">Bolalar Stomatologiyasi</option>
-                    </select>
-                    <input type="date" required>
-                    <textarea placeholder="Qo'shimcha Izohlar" rows="4"></textarea>
-                    <button type="submit" class="btn btn-primary">Vaqt Belgilash</button>
-                </form>
+                <form action="https://formspree.io/f/mbdzeryp" method="POST" id="appointmentForm">
+    
+    <input type="text" name="Mijoz Ismi" placeholder="To'liq Ism Familiyangiz" required>
+    
+    <input type="tel" name="Telefon" placeholder="Telefon Raqamingiz" required>
+    
+    <select name="Xizmat turi" required>
+        <option value="">Xizmatni Tanlang</option>
+        <option value="Umumiy Stomatologiya">Umumiy Stomatologiya</option>
+        <option value="Kosmetik Stomatologiya">Kosmetik Stomatologiya</option>
+        <option value="Implantlar">Implantlar</option>
+        <option value="Ortopediya">Ortopediya</option>
+        <option value="Ildiz Kanal Terapiyasi">Ildiz Kanal Terapiyasi</option>
+        <option value="Bolalar Stomatologiyasi">Bolalar Stomatologiyasi</option>
+    </select>
+    
+    <input type="date" name="Sana" required>
+    
+    <textarea name="Izoh" placeholder="Qo'shimcha Izohlar" rows="4"></textarea>
+    
+    <button type="submit" class="btn btn-primary">Vaqt Belgilash</button>
+</form>
             </div>
         </div>
     </section>
