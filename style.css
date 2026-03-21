@@ -863,3 +863,36 @@ section h2::after {
     font-size: 20px;
     margin-top: 5px;
 }
+/* This targets the area containing your Info and your Form */
+.contact-content {
+    display: flex;
+    flex-direction: row; /* Side by side */
+    justify-content: space-between; /* Pushes them apart */
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Ensure the contact info takes up about 40% */
+.contact-info {
+    flex: 1;
+    max-width: 400px;
+}
+
+/* Ensure the form takes up the right side (about 55%) */
+.appointment-form-container {
+    flex: 1.2;
+    margin: 0; /* Remove the auto margin we used before */
+}
+
+/* Mobile Fix: Stack them on top of each other when the screen is small */
+@media screen and (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .contact-info, .appointment-form-container {
+        max-width: 100%;
+        width: 100%;
+    }
+}
