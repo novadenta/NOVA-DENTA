@@ -212,48 +212,50 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2>Vaqt Belgilash</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
+    <div class="container">
+        <h2 class="section-title">Vaqt Belgilash</h2>
+        <div class="contact-content">
+            
+            <div class="contact-info">
+                <div class="info-column"> <div class="info-item">
                         <h3>📍 Lokatsiya</h3>
-                        <p>Islom Karimov ko'chasi, 67-uy<br>Qarshi Shahar, Qashqadaryo Viloyati</p>
+                        <p>Islom Karimov ko'chasi, 67-uy<br>Qarshi Shahar</p>
                     </div>
                     <div class="info-item">
                         <h3>📞 Telefon</h3>
-                        <p> +998-(99)-452-34-50</p>
+                        <p>+998-(99)-452-34-50</p>
                     </div>
                     <div class="info-item">
-                        <h3>📧 Email</h3>
+                        <h3>✉️ Email</h3>
                         <p>tulayevjamoliddin@gmail.com</p>
                     </div>
                     <div class="info-item">
                         <h3>🕒 Ish Vaqti</h3>
-                        <p>Du-Sha: 24 soat xizmatdamiz <br>Yak: Dam olish kuni!</p>
+                        <p>Du-Sha: 24 soat xizmatdamiz<br>Yak: Dam olish kuni!</p>
                     </div>
                 </div>
-                <form class="appointment-form" id="appointmentForm">
-                    <input type="text" placeholder="To'liq Ism Familiyangiz" required>
-                    <input type="tel" placeholder="Telefon Raqamingiz" required>
-                    <select required>
-                        <option value="">Xizmatni Tanlang</option>
+            </div>
+
+            <div class="form-container">
+                <form action="https://formspree.io/f/mbdzeryp" method="POST" class="appointment-form">
+                    <input type="text" name="name" placeholder="To'liq Ism Familiyangiz" required>
+                    <input type="tel" name="phone" placeholder="Telefon Raqamingiz" required>
+                    <select name="service" required>
+                        <option value="">Xizmatni Tanlang...</option>
                         <option value="general">Umumiy Stomatologiya</option>
-                        <option value="cosmetic">Kosmetik Stomatologiya</option>
                         <option value="implants">Implantlar</option>
                         <option value="orthodontics">Ortopediya</option>
-                        <option value="root-canal">Ildiz Kanal Terapi</option>
-                        <option value="pediatric">Bolalar Stomatologiyasi</option>
                     </select>
-                    <input type="date" required>
-                    <textarea placeholder="Qo'shimcha Izohlar" rows="4"></textarea>
+                    <input type="date" name="date" required>
+                    <textarea name="message" placeholder="Qo'shimcha Izohlar" rows="4"></textarea>
                     <button type="submit" class="btn btn-primary">Vaqt Belgilash</button>
                 </form>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
