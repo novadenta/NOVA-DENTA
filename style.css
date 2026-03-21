@@ -730,7 +730,14 @@ section h2::after {
     .contact-info {
         grid-template-columns: 1fr;
     }
-
+.social-fixed a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white; /* Makes the icon white */
+    font-size: 20px; /* Adjusts the icon size */
+}
     section h2 {
         font-size: 2rem;
     }
