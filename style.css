@@ -244,48 +244,7 @@ section h2 {
     padding-bottom: 1rem;
 }
 
-/* Registered clients table */
-.registered {
-    background-color: #ffffff;
-    padding: 100px 20px;
-}
 
-.registration-table-wrapper {
-    overflow-x: auto;
-    margin-top: 1.5rem;
-}
-
-#registrationTable {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 740px;
-}
-
-#registrationTable th,
-#registrationTable td {
-    border: 1px solid #d4d9e2;
-    padding: 10px 12px;
-    text-align: left;
-    font-size: 0.92rem;
-    color: #333;
-}
-
-#registrationTable thead {
-    background-color: #f0f4f8;
-}
-
-#registrationTable tbody tr:nth-child(odd) {
-    background-color: #fbfcff;
-}
-
-section h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 4px;
-    background-color: var(--primary-color);
-    margin: 1rem auto 0;
-}
 
 /* About Section */
 .about {
@@ -636,67 +595,62 @@ section h2::after {
     background-color: var(--light-color);
 }
 
+/* Main Container */
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    display: flex;
+    justify-content: center; /* Centers the two main columns on the page */
+    align-items: center;     /* Aligns them vertically */
+    gap: 60px;               /* Space between info and form */
+    max-width: 1000px;
+    margin: 40px auto;       /* Centers the container itself */
 }
 
+/* Info Side Centering */
 .contact-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centers the info-column within its half */
+}
+
+.info-column {
+    text-align: left;        /* Keeps text readable but contained */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .info-item h3 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    color: #007bff;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
 }
 
-.info-item p {
-    color: #666;
-    line-height: 1.8;
+/* Form Side Centering */
+.form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .appointment-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    width: 100%;
+    max-width: 400px;        /* Prevents the form from becoming too wide */
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-.appointment-form input,
-.appointment-form select,
-.appointment-form textarea {
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-.appointment-form input:focus,
-.appointment-form select:focus,
-.appointment-form textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(0, 132, 214, 0.1);
-}
-
-.appointment-form button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: var(--border-radius);
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.appointment-form button:hover {
-    background-color: var(--secondary-color);
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column; /* Stacks vertically on small screens */
+        text-align: center;
+    }
+    
+    .info-column {
+        text-align: center;    /* Full center for mobile */
+    }
 }
 
 /* Footer */
